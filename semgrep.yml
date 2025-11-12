@@ -1,0 +1,39 @@
+id: npm-remote-dynamic-dependency
+patterns:
+  - pattern-either:
+      - pattern-either:
+          - pattern: |
+              "dependencies": { ..., "$PKG_NAME": $URL, ... }
+          - pattern: |
+              "devDependencies": { ..., "$PKG_NAME": $URL, ... }
+          - pattern: |
+              "peerDependencies": { ..., "$PKG_NAME": $URL, ... }
+      - pattern: |
+          { ..., "resolved": $URL, ... }
+  - metavariable-pattern:
+      metavariable: $URL
+      patterns:
+        - pattern-regex: (file:.*|.*://.*)
+        - pattern-not-regex: .*registry\.npmjs\.org.*
+  - focus-metavariable: $URL
+message: Potential Remote Dynamic Dependency (RDD) detected. A dependency in
+  this file points to a suspicious URL ($URL) instead of a standard package
+  version or the official NPM registry.
+languages:
+  - json
+paths:
+  include:
+    - package.json
+    - package-lock.json
+severity: ERROR
+metadata:
+  technology:
+    - npm
+  subcategory:
+    - vuln
+  likelihood: MEDIUM
+  impact: HIGH
+  confidence: HIGH
+  license: Axonius
+  vulnerability_class:
+    - MISC
