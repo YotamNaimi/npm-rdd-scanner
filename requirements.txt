@@ -1,0 +1,9 @@
+This project relies only on the Python Standard Library (e.g., json, os, subprocess).
+
+No external Python packages are required via pip.
+
+Prerequisites for execution (must be installed separately):
+
+- Python 3.x
+
+- GitHub CLI ('gh')

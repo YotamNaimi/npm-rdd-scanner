@@ -1,0 +1,73 @@
+--- Git Ignore for NPM Dependency Audit Tool ---
+
+
+1. Bytecode, Compilation, and Build Artifacts
+
+pycache/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+MANIFEST
+
+2. Virtual Environments and Environment Configs
+
+.env
+.venv
+env/
+venv/
+ENV/
+.python-version
+.pip-cache/
+
+3. IDEs and Local Editor/OS Files
+
+Common IDE/Editor files
+
+.vscode/
+.idea/
+*.swp
+*~
+*.swo
+
+OS files
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+4. Logs, Temporary Data, and Sensitive Artifacts (Critical for Security Tool)
+
+
+Logs and Databases
+
+*.log
+*.sqlite3
+*.db
+
+Security & Secrets (to prevent accidental commit of tokens)
+
+.env.local
+.env.*.local
+*.pem
+.key
+.crt
+.secrets/
+secrets.
+github_token
+.github_token
+token.txt
+*.token
+
+Temporary Reports/Archives
+
+reports.zip
+reports.tar.gz
+*.report
+*.tmp
+*.temp
+*.bak
