@@ -34,6 +34,6 @@ metadata:
   likelihood: MEDIUM
   impact: HIGH
   confidence: HIGH
-  license: Axonius
+  license: YotamNaimi
   vulnerability_class:
     - MISC
