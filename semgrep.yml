@@ -34,6 +34,6 @@ metadata:
   likelihood: MEDIUM
   impact: HIGH
   confidence: HIGH
-  license: YotamNaimi
+  license: MIT
   vulnerability_class:
     - MISC
